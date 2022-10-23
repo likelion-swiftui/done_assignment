@@ -1,18 +1,17 @@
 //
-//  Page1View.swift
+//  Page4View.swift
 //  20221018
 //
-//  Created by Donghoon Bae on 2022/10/18.
+//  Created by Donghoon Bae on 2022/10/23.
 //
 
 import SwiftUI
 
-struct PageView: View {
-    
+struct Page4View: View {
     var body: some View {
             
         VStack {
-            Text("Page1")
+            Text("Page4")
                 .font(.title)
             Text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose.\n")
                 .multilineTextAlignment(.leading)
@@ -22,19 +21,19 @@ struct PageView: View {
                 .font(.caption)
             Spacer()
             VStack {
+                NavigationLink(destination: PageView())
+                {
+                    PageButton(pageNum: "Page1")
+                }
+                .buttonStyle(.bordered)
                 NavigationLink(destination: Page2View())
                 {
                     PageButton(pageNum: "Page2")
                 }
                 .buttonStyle(.bordered)
-                NavigationLink(destination: Page5View())
+                NavigationLink(destination: Page3View())
                 {
-                    PageButton(pageNum: "Page5")
-                }
-                .buttonStyle(.bordered)
-                NavigationLink(destination: Page4View())
-                {
-                    PageButton(pageNum: "Page4")
+                    PageButton(pageNum: "Page3")
                 }
                 .buttonStyle(.bordered)
             }
@@ -43,11 +42,10 @@ struct PageView: View {
             
             .padding()
         }
-    
 }
 
-struct Page1View_Previews: PreviewProvider {
+struct Page4View_Previews: PreviewProvider {
     static var previews: some View {
-        PageView()
+        Page4View()
     }
 }
