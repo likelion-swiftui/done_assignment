@@ -18,6 +18,7 @@
 		63B96403290523010011E078 /* Page3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96402290523010011E078 /* Page3View.swift */; };
 		63B964052905230E0011E078 /* Page4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B964042905230E0011E078 /* Page4View.swift */; };
 		63B964072905231D0011E078 /* Page5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B964062905231D0011E078 /* Page5View.swift */; };
+		63B96409290525440011E078 /* Page1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B96408290525440011E078 /* Page1View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		63B96402290523010011E078 /* Page3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page3View.swift; sourceTree = "<group>"; };
 		63B964042905230E0011E078 /* Page4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4View.swift; sourceTree = "<group>"; };
 		63B964062905231D0011E078 /* Page5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page5View.swift; sourceTree = "<group>"; };
+		63B96408290525440011E078 /* Page1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page1View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				633B3CEE28FEDEDB00E1ABEA /* PageView.swift */,
+				63B96408290525440011E078 /* Page1View.swift */,
 				63B96400290522C90011E078 /* Page2View.swift */,
 				63B96402290523010011E078 /* Page3View.swift */,
 				63B964042905230E0011E078 /* Page4View.swift */,
@@ -173,6 +176,7 @@
 				63B963FF290513580011E078 /* PageButton.swift in Sources */,
 				63B96403290523010011E078 /* Page3View.swift in Sources */,
 				633B3D1728FEE64F00E1ABEA /* Data.swift in Sources */,
+				63B96409290525440011E078 /* Page1View.swift in Sources */,
 				63B964052905230E0011E078 /* Page4View.swift in Sources */,
 				633B3CE028FEDDC700E1ABEA /* _0221018App.swift in Sources */,
 			);

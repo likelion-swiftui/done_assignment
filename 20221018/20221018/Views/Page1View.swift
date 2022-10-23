@@ -1,5 +1,5 @@
 //
-//  Page4View.swift
+//  Page1View.swift
 //  20221018
 //
 //  Created by Donghoon Bae on 2022/10/23.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct Page4View: View {
+struct Page1View: View {
     var body: some View {
             
         VStack {
-            Text("Page4")
+            Text("Page1")
                 .font(.title)
             Text("It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose.\n")
                 .multilineTextAlignment(.leading)
@@ -21,19 +21,19 @@ struct Page4View: View {
                 .font(.caption)
             Spacer()
             VStack {
-                NavigationLink(destination: Page1View())
-                {
-                    PageButton(pageNum: "Page1")
-                }
-                .buttonStyle(.bordered)
                 NavigationLink(destination: Page2View())
                 {
                     PageButton(pageNum: "Page2")
                 }
                 .buttonStyle(.bordered)
-                NavigationLink(destination: Page3View())
+                NavigationLink(destination: Page5View())
                 {
-                    PageButton(pageNum: "Page3")
+                    PageButton(pageNum: "Page5")
+                }
+                .buttonStyle(.bordered)
+                NavigationLink(destination: Page4View())
+                {
+                    PageButton(pageNum: "Page4")
                 }
                 .buttonStyle(.bordered)
             }
@@ -44,8 +44,8 @@ struct Page4View: View {
         }
 }
 
-struct Page4View_Previews: PreviewProvider {
+struct Page1View_Previews: PreviewProvider {
     static var previews: some View {
-        Page4View()
+        Page1View()
     }
 }

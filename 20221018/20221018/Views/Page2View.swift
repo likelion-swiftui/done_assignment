@@ -21,7 +21,7 @@ struct Page2View: View {
                 .font(.caption)
             Spacer()
             VStack {
-                NavigationLink(destination: PageView())
+                NavigationLink(destination: Page1View())
                 {
                     PageButton(pageNum: "Page1")
                 }
