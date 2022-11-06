@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LandmarkView: View {
     
+    @ObservedObject var datalist: dataList
     var landmark: Landmark
-    @
     
     var body: some View {
         VStack {
@@ -28,22 +28,19 @@ struct LandmarkView: View {
                 HStack {
                     Text(landmark.name)
                         .font(.title)
-                    //                       Button {
-                    //                           if landmark.isFavorite {
-                    //                               landmark.isFavorite = false
-                    //                           } else {
-                    //                               landmark.isFavorite = true
-                    //                           }
-                    //                       } label: {
-                    //                           landmark.isFavorite ? Image(systemName: "star.fill") : Image(systemName: "star")
-                    //                       }
+                    
                     Button {
-                        landmark.isFavorite.toggle()
+                        datalist.landmarkData.isFavorite.toggle()
                     } label: {
-                        Label("Toggle Favorite", systemImage: landmark.isFavorite ? "star.fill" : "star")
-                            .labelStyle(.iconOnly)
-                            .foregroundColor(landmark.isFavorite ? .yellow : .gray)
+                        landmark.isFavorite ? Image(systemName: "star.fill") : Image(systemName: "star")
                     }
+                    //                    Button {
+                    //                        landmark.isFavorite.toggle()
+                    //                    } label: {
+                    //                        Label("Toggle Favorite", systemImage: landmark.isFavorite ? "star.fill" : "star")
+                    //                            .labelStyle(.iconOnly)
+                    //                            .foregroundColor(landmark.isFavorite ? .yellow : .gray)
+                    //                    }
                 }
                 HStack {
                     Text(landmark.park)
@@ -64,7 +61,6 @@ struct LandmarkView: View {
             Spacer()
         }
     }
-    
 }
 
 struct LandmarksView_Previews: PreviewProvider {

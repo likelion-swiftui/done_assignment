@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Landmark: Identifiable, Codable {
+struct Landmark: Identifiable, Codable, Hashable {
     var id: Int
     var name: String
     var category: String

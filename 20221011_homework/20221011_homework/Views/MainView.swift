@@ -10,14 +10,20 @@ import SwiftUI
 struct MainView: View {
     
     @ObservedObject var landmarkStore: LandmarkStore = LandmarkStore(landmark: landmarkData)
-    @State var isFavoriteOnly: Bool = false
+    @State private var isFavoriteOnly: Bool = false
+    
+    var favoriteLandmark: [Landmark] {
+        landmarkData.filter { landmark in
+            (!isFavoriteOnly || landmark.isFavorite)
+        }
+    }
     
     var body: some View {
         NavigationView {
             VStack {
                 List {
                     Toggle(isOn: $isFavoriteOnly) { Text("Favorite Only") }
-                    ForEach(landmarkStore.landmark) { landmark in
+                    ForEach(favoriteLandmark) { landmark in
                         NavigationLink(destination: LandmarkView(landmark: landmark)) {
                             ListCell(landmark: landmark)
                         }
