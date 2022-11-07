@@ -30,17 +30,17 @@ struct LandmarkView: View {
                         .font(.title)
                     
                     Button {
-                        datalist.landmarkData.isFavorite.toggle()
+                        landmark.isFavorite.toggle()
                     } label: {
                         landmark.isFavorite ? Image(systemName: "star.fill") : Image(systemName: "star")
                     }
-                    //                    Button {
-                    //                        landmark.isFavorite.toggle()
-                    //                    } label: {
-                    //                        Label("Toggle Favorite", systemImage: landmark.isFavorite ? "star.fill" : "star")
-                    //                            .labelStyle(.iconOnly)
-                    //                            .foregroundColor(landmark.isFavorite ? .yellow : .gray)
-                    //                    }
+                    Button {
+                        landmark.isFavorite.toggle()
+                    } label: {
+                        Label("Toggle Favorite", systemImage: landmark.isFavorite ? "star.fill" : "star")
+                            .labelStyle(.iconOnly)
+                            .foregroundColor(landmark.isFavorite ? .yellow : .gray)
+                    }
                 }
                 HStack {
                     Text(landmark.park)
