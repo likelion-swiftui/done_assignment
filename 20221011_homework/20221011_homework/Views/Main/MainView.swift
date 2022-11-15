@@ -9,17 +9,16 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObservedObject var landmarkStore: LandmarkStore = LandmarkStore(landmark: landmarkData)
+    @EnvironmentObject var dataList: DataList
     @State private var isFavoriteOnly: Bool = false
     
     var favoriteLandmark: [Landmark] {
-        landmarkData.filter { landmark in
+        dataList.landmarkData.filter { landmark in
             (!isFavoriteOnly || landmark.isFavorite)
         }
     }
     
     var body: some View {
-        NavigationView {
             VStack {
                 List {
                     Toggle(isOn: $isFavoriteOnly) { Text("Favorite Only") }
@@ -31,7 +30,6 @@ struct MainView: View {
                 }
             }
             .navigationTitle("Landmarks")
-        }
     }
 }
 
@@ -58,5 +56,6 @@ struct ListCell: View {
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
         MainView()
+            .environmentObject(DataList())
     }
 }

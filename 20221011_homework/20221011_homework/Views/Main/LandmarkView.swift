@@ -9,38 +9,27 @@ import SwiftUI
 
 struct LandmarkView: View {
     
-    @ObservedObject var datalist: dataList
+    @EnvironmentObject var dataList: DataList
     var landmark: Landmark
     
+    var landmarkIndex: Int {
+        dataList.landmarkData.firstIndex(where: { $0.id == landmark.id })!
+    }
+    
     var body: some View {
-        VStack {
-            Image("applepark3")
+        ScrollView {
+            Image("bak")
                 .ignoresSafeArea(edges: .top)
                 .frame(height: 10)
             
             CircleImage(image: Image(landmark.imageName).resizable())
-                .offset(y: 100)
-                .padding()
                 .frame(width: 250)
-            
             
             VStack(alignment: .leading) {
                 HStack {
                     Text(landmark.name)
                         .font(.title)
-                    
-                    Button {
-                        landmark.isFavorite.toggle()
-                    } label: {
-                        landmark.isFavorite ? Image(systemName: "star.fill") : Image(systemName: "star")
-                    }
-                    Button {
-                        landmark.isFavorite.toggle()
-                    } label: {
-                        Label("Toggle Favorite", systemImage: landmark.isFavorite ? "star.fill" : "star")
-                            .labelStyle(.iconOnly)
-                            .foregroundColor(landmark.isFavorite ? .yellow : .gray)
-                    }
+                    FavoriteButton(isFavorite: $dataList.landmarkData[landmarkIndex].isFavorite)
                 }
                 HStack {
                     Text(landmark.park)
@@ -64,7 +53,10 @@ struct LandmarkView: View {
 }
 
 struct LandmarksView_Previews: PreviewProvider {
+    static let dataList = DataList()
+    
     static var previews: some View {
-        LandmarkView(landmark: landmarkData[0])
+        LandmarkView(landmark: DataList().landmarkData[0])
+            .environmentObject(dataList)
     }
 }

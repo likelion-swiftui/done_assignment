@@ -11,7 +11,8 @@ import SwiftUI
 struct _0221011_homeworkApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            LandmarkTabView()
+                .environmentObject(DataList())
         }
     }
 }

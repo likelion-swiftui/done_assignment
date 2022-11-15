@@ -6,9 +6,21 @@
 //
 
 import Foundation
+import Combine
 
-class dataList: ObservableObject {
+final class DataList: ObservableObject {
     @Published var landmarkData: [Landmark] = loadJson("landmarkData.json")
+    
+    var categories: [String: [Landmark]] {
+        Dictionary(
+            grouping: landmarkData, by: { $0.category.rawValue }
+            )
+    }
+    
+    var features: [Landmark] {
+            landmarkData.filter { $0.isFeatured }
+        }
+
     
 }
 
