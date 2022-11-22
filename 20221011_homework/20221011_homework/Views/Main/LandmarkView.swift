@@ -19,7 +19,7 @@ struct LandmarkView: View {
     var body: some View {
         ScrollView {
             Image("bak")
-                .ignoresSafeArea(edges: .top)
+//                .ignoresSafeArea(edges: .top)
                 .frame(height: 10)
             
             CircleImage(image: Image(landmark.imageName).resizable())
