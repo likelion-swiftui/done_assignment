@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var symbols: [Symbol] = PickableSymbols.pickableSymbols
     @State private var colsCount: Int = 6
     @State private var isEdit: Bool = false
+    @State private var number: Int = 6
     @State private var cols = [
         GridItem(.flexible()),
         GridItem(.flexible()),
@@ -58,7 +59,7 @@ struct ContentView: View {
     
     func incrementStep() {
         if colsCount == 6 {
-            colsCount = 6
+            number += 1
         } else if colsCount > 0 {
             colsCount += 1
             cols.append(GridItem(.flexible()))
@@ -67,7 +68,7 @@ struct ContentView: View {
     
     func decrementStep() {
         if colsCount == 2 {
-            colsCount = 2
+            number -= 1
         } else if colsCount > 1 {
             colsCount -= 1
             cols.removeLast()
@@ -75,14 +76,14 @@ struct ContentView: View {
     }
 }
 
-struct ImageView: View {
-    
-    var symbols = Symbol
-    
-    var body: some View {
-        Image(systemName: <#T##String#>)
-    }
-}
+//struct ImageView: View {
+//
+//    var symbols = Symbol
+//
+//    var body: some View {
+//        Image(systemName: <#T##String#>)
+//    }
+//}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
