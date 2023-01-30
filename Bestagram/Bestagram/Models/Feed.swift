@@ -11,8 +11,9 @@ import SwiftUI
 struct Feed: Identifiable {
     let id = UUID()
     let userId: String
+    let userProfileImage: String
     let date: Date
-    let images: [Image]
+    let images: [String]
     let content: String
     let likes: Int
     let comments: Int
