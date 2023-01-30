@@ -9,12 +9,28 @@ import SwiftUI
 
 struct FeedView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach(0...5, id: \.self) { story in
+                        Text("\(story)")
+                    }
+                }
+            }
+            ScrollView {
+                ForEach(0...10, id: \.self) { feed in
+                    Text("\(feed)")
+                }
+            }
+        }
+        .navigationTitle("bestagram")
     }
 }
 
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        NavigationStack {
+            FeedView()
+        }
     }
 }
