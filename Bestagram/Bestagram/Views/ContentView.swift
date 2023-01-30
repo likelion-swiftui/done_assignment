@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         TabView {
             NavigationStack {
-                EmptyView()
+                FeedView()
             }.tabItem {
                 Image(systemName: "house")
             }
