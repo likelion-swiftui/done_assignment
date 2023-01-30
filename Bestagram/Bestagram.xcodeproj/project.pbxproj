@@ -12,6 +12,7 @@
 		63902869298802B900EF8C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63902868298802B900EF8C74 /* Assets.xcassets */; };
 		6390286C298802B900EF8C74 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6390286B298802B900EF8C74 /* Preview Assets.xcassets */; };
 		639028772988164D00EF8C74 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639028762988164D00EF8C74 /* FeedView.swift */; };
+		6390287929881D0600EF8C74 /* FeedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6390287829881D0600EF8C74 /* FeedRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		63902868298802B900EF8C74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6390286B298802B900EF8C74 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		639028762988164D00EF8C74 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		6390287829881D0600EF8C74 /* FeedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				639028762988164D00EF8C74 /* FeedView.swift */,
+				6390287829881D0600EF8C74 /* FeedRow.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6390287929881D0600EF8C74 /* FeedRow.swift in Sources */,
 				63902867298802B800EF8C74 /* ContentView.swift in Sources */,
 				639028772988164D00EF8C74 /* FeedView.swift in Sources */,
 				63902865298802B800EF8C74 /* BestagramApp.swift in Sources */,
