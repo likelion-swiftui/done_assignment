@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Feed: Identifiable, Hashable {
+struct Feed: Identifiable {
     let id = UUID()
     let userId: String
     let date: Date
