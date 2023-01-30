@@ -31,7 +31,8 @@ struct ListRow: View {
                     Text("\(feed.content)").font(.subheadline)
                     HStack {
                         HStack {
-                            Image(systemName: "bubble.right")
+                            Image(systemName: "message")
+                            //checkmark.seal.fill
                             Text("\(feed.comments.count)")
                         }.onTapGesture {
                             
@@ -39,7 +40,7 @@ struct ListRow: View {
                         Spacer()
                         
                         HStack {
-                            Image(systemName: "repeat")
+                            Image(systemName: "arrow.2.squarepath")
                             Text("\(feed.reTweet)")
                         }.onTapGesture {
                             

@@ -14,14 +14,14 @@ struct HomeFeedsView: View {
         VStack {
             List {
                 ForEach(feedStore.feeds, id: \.id) { feed in
-                    VStack {
+//                    VStack {
 //                        NavigationLink {
 //                            EmptyView()
 //                        } label: {
                             ListRow(feed: feed)
 //                        }
 //                        ButtonsRow(feed: feed)
-                    }
+//                    }
                 }
             }.listStyle(.plain)
                 .navigationTitle("twitter")
@@ -31,7 +31,7 @@ struct HomeFeedsView: View {
                         Image(systemName: "person.circle.fill")
                     }
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Image(systemName: "wand.and.stars")
+                        Image(systemName: "sparkles")
                     }
                 }
         }

@@ -30,7 +30,7 @@ struct ContentView: View {
             NavigationStack {
                 EmptyView()
             }.tabItem {
-                Image(systemName: "mail")
+                Image(systemName: "envelope")
             }
         }
     }
