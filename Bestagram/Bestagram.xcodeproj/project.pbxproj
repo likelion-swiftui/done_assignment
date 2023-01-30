@@ -52,7 +52,8 @@
 			isa = PBXGroup;
 			children = (
 				63902864298802B800EF8C74 /* BestagramApp.swift */,
-				63902866298802B800EF8C74 /* ContentView.swift */,
+				639028732988147C00EF8C74 /* Views */,
+				639028722988147400EF8C74 /* Models */,
 				63902868298802B900EF8C74 /* Assets.xcassets */,
 				6390286A298802B900EF8C74 /* Preview Content */,
 			);
@@ -65,6 +66,21 @@
 				6390286B298802B900EF8C74 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		639028722988147400EF8C74 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		639028732988147C00EF8C74 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				63902866298802B800EF8C74 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
