@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		630AE75829892542008A01B0 /* ExplorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AE75729892542008A01B0 /* ExplorView.swift */; };
+		630AE75A298925AF008A01B0 /* SquareFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630AE759298925AF008A01B0 /* SquareFeed.swift */; };
 		63902865298802B800EF8C74 /* BestagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63902864298802B800EF8C74 /* BestagramApp.swift */; };
 		63902867298802B800EF8C74 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63902866298802B800EF8C74 /* ContentView.swift */; };
 		63902869298802B900EF8C74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63902868298802B900EF8C74 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		630AE75729892542008A01B0 /* ExplorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplorView.swift; sourceTree = "<group>"; };
+		630AE759298925AF008A01B0 /* SquareFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareFeed.swift; sourceTree = "<group>"; };
 		63902861298802B800EF8C74 /* Bestagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bestagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63902864298802B800EF8C74 /* BestagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestagramApp.swift; sourceTree = "<group>"; };
 		63902866298802B800EF8C74 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +44,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		630AE756298924F3008A01B0 /* Explor */ = {
+			isa = PBXGroup;
+			children = (
+				630AE75729892542008A01B0 /* ExplorView.swift */,
+				630AE759298925AF008A01B0 /* SquareFeed.swift */,
+			);
+			path = Explor;
+			sourceTree = "<group>";
+		};
 		63902858298802B800EF8C74 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +74,7 @@
 			children = (
 				63902864298802B800EF8C74 /* BestagramApp.swift */,
 				639028732988147C00EF8C74 /* Views */,
+				630AE756298924F3008A01B0 /* Explor */,
 				639028722988147400EF8C74 /* Models */,
 				63902868298802B900EF8C74 /* Assets.xcassets */,
 				6390286A298802B900EF8C74 /* Preview Content */,
@@ -181,12 +195,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				630AE75A298925AF008A01B0 /* SquareFeed.swift in Sources */,
 				6390287929881D0600EF8C74 /* FeedRow.swift in Sources */,
 				6390287B29881D3200EF8C74 /* Feed.swift in Sources */,
 				63902867298802B800EF8C74 /* ContentView.swift in Sources */,
 				639028772988164D00EF8C74 /* FeedView.swift in Sources */,
 				63902865298802B800EF8C74 /* BestagramApp.swift in Sources */,
 				6390287F29881ED900EF8C74 /* CircleImage.swift in Sources */,
+				630AE75829892542008A01B0 /* ExplorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
