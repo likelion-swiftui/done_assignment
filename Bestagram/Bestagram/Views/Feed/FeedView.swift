@@ -8,18 +8,21 @@
 import SwiftUI
 
 struct FeedView: View {
+    
+    @ObservedObject private var feedStore: FeedStore = FeedStore()
+    
     var body: some View {
         VStack {
-            ScrollView(.horizontal) {
-                HStack {
-                    ForEach(0...5, id: \.self) { story in
-                        Text("\(story)")
-                    }
-                }
-            }
+//            ScrollView(.horizontal) {
+//                HStack {
+//                    ForEach(0...5, id: \.self) { story in
+//                        Text("\(story)")
+//                    }
+//                }
+//            }
             ScrollView {
-                ForEach(0...10, id: \.self) { feed in
-                    Text("\(feed)")
+                ForEach(feedStore.feedList, id: \.id) { feed in
+                    FeedRow(feed: feed)
                 }
             }
         }

@@ -19,7 +19,7 @@ struct FeedRow: View {
                 VStack(alignment: .leading) {
                     Text("\(feed.userId)")
                         .font(.headline)
-                    Text("위치")
+                    Text("#위치")
                         .font(.subheadline)
                 }
                 Spacer()
