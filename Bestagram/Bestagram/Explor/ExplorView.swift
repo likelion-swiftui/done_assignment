@@ -27,7 +27,16 @@ struct ExplorView: View {
                             FeedRow(feed: feed)
                         }
                     } label: {
-                        SquareFeed(imageName: feed.images.first!)
+                        
+                        if feed.images.count > 1 {
+                            SquareFeed(imageName: feed.images.first!)
+                                .overlay(
+                                    Image(systemName: "square.fill.on.square.fill")
+                                        .foregroundColor(.white)
+                                    , alignment: .topTrailing)
+                        } else {
+                            SquareFeed(imageName: feed.images.first!)
+                        }
                     }
                 }
             }.searchable(text: $searchText)

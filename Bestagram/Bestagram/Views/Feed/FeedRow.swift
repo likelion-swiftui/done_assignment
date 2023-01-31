@@ -33,7 +33,8 @@ struct FeedRow: View {
                 ForEach(feed.images, id: \.self) { image in
                     Image(image)
                         .resizable()
-                        .scaledToFill()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: UIScreen.screenWidth)
                 }
             }
             .tabViewStyle(PageTabViewStyle())
@@ -48,12 +49,12 @@ struct FeedRow: View {
                 }
                 
                 Text("좋아요 \(feed.likes)개")
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
                     HStack {
                         Text("\(feed.userId) ").font(.headline) +
                         Text(" \(feed.content)").font(.subheadline)
                     }
-                    VStack(alignment: .leading) {
+                    VStack(alignment: .leading, spacing: 10) {
                         NavigationLink {
                             
                         } label: {
@@ -62,7 +63,7 @@ struct FeedRow: View {
                         Text("\(feed.date)")
                     }.font(.footnote).foregroundColor(.secondary)
                 }
-                
+                Spacer()
             }.padding(.horizontal, 10)
         }
     }
