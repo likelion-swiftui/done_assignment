@@ -9,11 +9,10 @@ import SwiftUI
 
 struct ExplorView: View {
     
-    var images: [String] = ["_IUofficial", "aespa_official", ]
     var cols = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1),
+        GridItem(.flexible(), spacing: 1),
     ]
     
     @State private var searchText: String = ""
@@ -21,7 +20,7 @@ struct ExplorView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: cols) {
+            LazyVGrid(columns: cols, spacing: 1) {
                 ForEach(feedStore.feedList, id: \.id) { feed in
                     NavigationLink {
                         ScrollView {

@@ -50,8 +50,8 @@ struct FeedRow: View {
                 Text("좋아요 \(feed.likes)개")
                 VStack(alignment: .leading) {
                     HStack {
-                        Text("\(feed.userId)").font(.headline)
-                        Text("\(feed.content)").font(.subheadline)
+                        Text("\(feed.userId) ").font(.headline) +
+                        Text(" \(feed.content)").font(.subheadline)
                     }
                     VStack(alignment: .leading) {
                         NavigationLink {

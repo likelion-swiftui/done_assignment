@@ -20,8 +20,9 @@ struct SquareFeed: View {
     var body: some View {
         Image("\(imageName)")
             .resizable()
-            .scaledToFit()
+            .aspectRatio(contentMode: .fill)
             .frame(width: UIScreen.screenWidth * 1 / 3, height: UIScreen.screenWidth * 1 / 3)
+            .clipped()
     }
 }
 
