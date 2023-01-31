@@ -24,7 +24,9 @@ struct ExplorView: View {
             LazyVGrid(columns: cols) {
                 ForEach(feedStore.feedList, id: \.id) { feed in
                     NavigationLink {
-                        EmptyView()
+                        ScrollView {
+                            FeedRow(feed: feed)
+                        }
                     } label: {
                         SquareFeed(imageName: feed.images.first!)
                     }

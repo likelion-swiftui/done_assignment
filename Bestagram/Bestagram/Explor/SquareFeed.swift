@@ -21,7 +21,6 @@ struct SquareFeed: View {
         Image("\(imageName)")
             .resizable()
             .scaledToFit()
-            .aspectRatio(contentMode: .fit)
             .frame(width: UIScreen.screenWidth * 1 / 3, height: UIScreen.screenWidth * 1 / 3)
     }
 }
