@@ -34,11 +34,17 @@ struct FeedRow: View {
                     Image(image)
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: UIScreen.screenWidth)
+                        .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
+                        .clipped()
                 }
             }
             .tabViewStyle(PageTabViewStyle())
-            .frame(height: 220)
+            .frame(width: UIScreen.screenWidth, height: UIScreen.screenWidth)
+            .overlay(
+                Text("\(feed.images.count)").font(.subheadline).foregroundColor(.white)
+                ,alignment: .topTrailing
+            )
+            
             VStack(alignment: .leading, spacing: 8) {
                 HStack {
                     Image(systemName: "heart")
